@@ -4,8 +4,7 @@ phases:
     commands:
       - sudo apt-get update
       - sudo apt-get install -y nginx
-      - sudo nginx -s reload
-      
+  
   pre_build:
     commands:
       - echo Pre-build phase started on `date`
