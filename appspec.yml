@@ -17,7 +17,7 @@ permissions:
     mode: 644
     type: file  
 hooks:
-  AfterInstall:
+  BeforeInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
