@@ -3,21 +3,9 @@ os: linux
 files:
   - source: /
     destination: /var/www/html  
-permissions:
-  - object: /var/www/html
-    pattern: "**"
-    owner: root
-    group: root
-    mode: 755 
-    type: directory
-  - object: /var/www/html
-    pattern: "**"
-    owner: root
-    group: root
-    mode: 644
-    type: file  
+
 hooks:
-  BeforeInstall:
+  AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
